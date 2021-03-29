@@ -71,7 +71,7 @@ local AncreJetee = false
 
 Citizen.CreateThread(function ()
     while true do
-    	Citizen.Wait(10)
+    	Citizen.Wait(25)
 		
 		-- Récupération du joueur
 		-- Get player info
