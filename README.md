@@ -1,20 +1,14 @@
 # HarryAnchor FR
 Un petit script tout simple pour avoir une ancre pour tous les bateaux
 
-
 ----------------------------------------------------------------------------
 
 # HarryAnchor EN
 An simple Fivem anchor for all boats 
 
-Ressources used : 0.0ms - 1% - 256Kb
-
-Tested on a server with more 400 players at the same time
-
-
 ------------------------------------------------------------------------------
 
-BENCHMARK
+# BENCHMARK
 
 SANS ETRE PILOTE DE BATEAU - NO DRIVING BOAT
 CPU msec 		Time %		Memory
