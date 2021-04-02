@@ -1,31 +1,31 @@
 --*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--
---*--------------------------------- HARRY BOAT ATTACH BY HARRY "AZRADEVOPS" ------------------------------------*--
---*																												*--
---*																												*--
---*-- FR --																										*--
---*   v 2.0.0 du 29/03/2021 (pour les différentes étapes du dev, lisez le fichier README_DEV.md)				*--
---*   > Ajout de la fonction ANCRE à tous les bateaux															*--
---*   			> Cela permets de lancer l'ancre et de figer le bateau											*--
---*					- Attention il ne faut pas dépasser les 20Kmh pour pouvoir le faire 						*--
---*																												*--
---*   Tous commentaires ou aides sont les bienvenus, allez sur  https://github.com/AzraDevOps/Harryattach	  	*--
---*																												*--
---*																												*--
---*-- EN --																										*--
---*   v 2.0.0 of 29/03/2021 (for the roadmap dev read README_DEV.md)											*--
---*   > Add anchor function for all boats																		*--
---*   			> Throw anchor and fix the boat																	*--
---*					- Be careful of your speed, you must be under 20Kmh to throw the anchor						*--
---*																												*--
---*   All comments or help welcome , go on  https://github.com/AzraDevOps/Harryattach	  						*--
---*																												*--
---*																												*--
+--*--------------------------------- HARRY BOAT ATTACH BY HARRY "AZRADEVOPS" -----------------------------------*--
+--*														*--
+--*														*--
+--*-- FR --													*--
+--*   v 2.0.0 du 29/03/2021 (pour les différentes étapes du dev, lisez le fichier README_DEV.md)		*--
+--*   > Ajout de la fonction ANCRE à tous les bateaux								*--
+--*   			> Cela permets de lancer l'ancre et de figer le bateau					*--
+--*					- Attention il ne faut pas dépasser les 20Kmh pour pouvoir le faire 	*--
+--*														*--
+--*   Tous commentaires ou aides sont les bienvenus, allez sur  https://github.com/AzraDevOps/Harryattach	*--
+--*														*--
+--*														*--
+--*-- EN --													*--
+--*   v 2.0.0 of 29/03/2021 (for the roadmap dev read README_DEV.md)						*--
+--*   > Add anchor function for all boats									*--
+--*   			> Throw anchor and fix the boat								*--
+--*					- Be careful of your speed, you must be under 20Kmh to throw the anchor	*--
+--*														*--
+--*   All comments or help welcome , go on  https://github.com/AzraDevOps/Harryattach	  			*--
+--*														*--
+--*														*--
 --*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--
 
 
 
 --*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--
---*	DECLARATIONS VARIABLES & CONFIG & ESX FRAMEWORK			*--
+--*	DECLARATIONS VARIABLES & CONFIG & ESX FRAMEWORK	    *--
 --*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--
 
 ESX = nil
@@ -57,7 +57,7 @@ local AncreJetee = false
 
 
 --*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--
---*	FONCTIONS 						 						*--
+--*	FONCTIONS 					    *--
 --*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--
 
 -- Pas de fonctions nécessaires pour ce script
@@ -66,7 +66,7 @@ local AncreJetee = false
 
 
 --*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--
---*	THREADS 						 						*--
+--*	THREADS 					    *--
 --*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--
 
 Citizen.CreateThread(function ()
