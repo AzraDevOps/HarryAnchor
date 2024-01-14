@@ -118,7 +118,7 @@ Citizen.CreateThread(function ()
 						-- [FR] Si l'ancre est déjà jetée, alors on la remonte
 						-- [EN]If the anchor always throwed, then take it back
 						if AncreJetee then
-							FreezeEntityPosition(myVehicle, false)
+							SetBoatAnchor(myVehicle, false)	
 							AncreJetee = false
 							SetVehicleEngineOn(myVehicle, true, false, true)								
 							Citizen.InvokeNative(0x8509B634FBE7DA11, "STRING")
@@ -129,7 +129,7 @@ Citizen.CreateThread(function ()
 						-- [FR] Si l'ancre n'est pas encore jetée, on la jette
 						-- [EN] if anchor is onboard, then throw it to stop the boat
 						elseif AncreJetee == false then
-							FreezeEntityPosition(myVehicle, true)
+							SetBoatAnchor(myVehicle, true)	
 							AncreJetee = true
 							SetVehicleEngineOn(myVehicle, false, false, true)
 							TaskLeaveVehicle(playerPed, myVehicle, 64)
