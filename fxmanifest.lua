@@ -2,7 +2,7 @@ fx_version "cerulean"
 game "gta5"
 lua54 "yes"
 
-author "Harry MEYERS"
+author "Harry MEYERS#6408"
 description "Anchor System"
 version "2.0.0"	-- 14 january 2024
 

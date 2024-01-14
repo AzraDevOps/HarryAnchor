@@ -64,11 +64,11 @@ local AncreJetee = false
 
 Citizen.CreateThread(function ()
     while true do
-    	Citizen.Wait(25)
-		
+    	Citizen.Wait(10)
+
 		-- [FR] Récupération du joueur
 		-- [EN] Get player info
-		local playerPed = PlayerId() --GetPlayerPed(-1)
+		local playerPed = PlayerPedId()
 		
 		-- [FR] Si le joueur est dans un véhicule
 		-- [EN] If Player is in a vehicle
@@ -82,7 +82,6 @@ Citizen.CreateThread(function ()
 			-- [FR] Si le model == BATEAU et s'il presse la touche [G] il jette l'ancre (ou la remonte si déjà jetée)
 			-- [EN] If the vehicle model is a boat and if the player press [G] then he throw anchor OR take back
 			if IsThisModelABoat(myVehicleHash) then
-					
 				-- [FR] Si le Flag (== true) on affiche le texte d'information pour expliquer comment ATTACH
 				if TextVisible then
 					Citizen.InvokeNative(0x8509B634FBE7DA11, "STRING")
@@ -118,8 +117,9 @@ Citizen.CreateThread(function ()
 						-- [FR] Si l'ancre est déjà jetée, alors on la remonte
 						-- [EN]If the anchor always throwed, then take it back
 						if AncreJetee then
-							SetBoatAnchor(myVehicle, false)	
 							AncreJetee = false
+							--FreezeEntityPosition(myVehicle, false)
+							SetBoatAnchor(myVehicle, false)	
 							SetVehicleEngineOn(myVehicle, true, false, true)								
 							Citizen.InvokeNative(0x8509B634FBE7DA11, "STRING")
 							Citizen.InvokeNative(0x5F68520888E69014, "Ancre remontée")
@@ -129,8 +129,10 @@ Citizen.CreateThread(function ()
 						-- [FR] Si l'ancre n'est pas encore jetée, on la jette
 						-- [EN] if anchor is onboard, then throw it to stop the boat
 						elseif AncreJetee == false then
-							SetBoatAnchor(myVehicle, true)	
 							AncreJetee = true
+							--FreezeEntityPosition(myVehicle, true)
+							SetBoatAnchor(myVehicle, true)	
+							SetForcedBoatLocationWhenAnchored(myVehicle, true)
 							SetVehicleEngineOn(myVehicle, false, false, true)
 							TaskLeaveVehicle(playerPed, myVehicle, 64)
 							Citizen.InvokeNative(0x8509B634FBE7DA11, "STRING")
